@@ -75,7 +75,7 @@ const MiApi = () => {
     <Card className="shadow-lg p-3 bg-body" key={elemento.id}>
       <Card.Img src={elemento.image}  />
       <Card.Body>
-        <Card.Title className='bg-primary text-white text-center rounded'>{elemento.title}</Card.Title>
+        <Card.Title className='bg-primary text-white text-center'>{elemento.title}</Card.Title>
         <Card.Text className="pt-3">
             <strong>Description:</strong> {elemento.description}
         </Card.Text>
