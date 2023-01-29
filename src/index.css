@@ -55,6 +55,7 @@ footer {
   background-color: #C19A6B;
   color: white;
   text-align: center;
-  margin: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   grid-area: footer;
 }
