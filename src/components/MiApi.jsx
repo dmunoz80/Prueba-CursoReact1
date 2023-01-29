@@ -58,14 +58,14 @@ const MiApi = () => {
     <div className="container">
       <Form>
        <h1 className="text-white"> <strong>Your Favourites Coofee</strong></h1>
-      <Form.Control className="form-control" 
+      <Form.Control className="form-control w-50" 
         value={search}
         onChange = {busqueda}
         type="text"
         placeholder="find your favorite coffee"
         />
         <Button
-        className="btn bg-secondary mt-3 w-50" 
+        className="btn btn-sm bg-secondary mt-3 w-25" 
         onClick={()=>sorting("title")}>in alphabetical order: A-Z or Z-A
         </Button>
         </Form>
