@@ -21,6 +21,7 @@ const MiApi = () => {
     const [search, setSearch] = useState ('')
     //Función de búsqueda
     const busqueda = (e) => {
+        e.preventDefault()
         setSearch(e.target.value)
     }
     //Filtrado
