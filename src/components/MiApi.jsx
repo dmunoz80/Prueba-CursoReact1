@@ -9,22 +9,23 @@ const MiApi = () => {
     const [info, setInfo] = useState ([]);
     //Llamar a la función que consume la Api
     useEffect (() => {
-        consultarInfo();
+    consultarInfo();
     }, [])
     //Funcion que consulta la Api
     const consultarInfo = async () => {
-        const response = await fetch("https://api.sampleapis.com/coffee/hot");
+        const response = await fetch("/coffee.json");
         const data = await response.json();
         setInfo(data);
     }
-    //Estado de búsqueda
+   
+    //Función de Filtrado
     const [search, setSearch] = useState ('')
-    //Función de búsqueda
+
     const busqueda = (e) => {
         e.preventDefault()
         setSearch(e.target.value)
     }
-    //Filtrado
+
     let results = []
     if(!search) {
         results = info
@@ -32,42 +33,42 @@ const MiApi = () => {
         results = info.filter((elemento) =>
         elemento.title.toLowerCase().includes(search.toLocaleLowerCase()) )
     }
-    
-    //Funcion de sort
-    const [order, setOrder] = useState('ASC');
-    const sorting = (col) => {
-        if(order === 'ASC') {
+
+
+    //Función para ordenar alfabéticamente
+
+    const [ordenar, setOrdenar] = useState('AZ');
+    const sorting = (e) => {
+        if(ordenar === 'AZ') {
             const sorted = [...info].sort((a, b) =>
-            a[col].toLowerCase() > b[col].toLowerCase() ? 1 : -1
+            a[e].toLowerCase() > b[e].toLowerCase() ? 1 : -1
             );
             setInfo(sorted);
-            setOrder('DSC');
+            setOrdenar('ZA');
         }
-        if(order === 'DSC') {
+        if(ordenar === 'ZA') {
             const sorted = [...info].sort((a, b) =>
-            a[col].toLowerCase() < b[col].toLowerCase() ? 1 : -1
+            a[e].toLowerCase() < b[e].toLowerCase() ? 1 : -1
             );
             setInfo(sorted);
-            setOrder('ASC');
+            setOrdenar('AZ');
         }
     }
-
-  
 
     return (
 
     <div className="container">
       <Form>
-       <h1 className="text-white"> <strong>Your Favourites Coofee</strong></h1>
+       <h1 className="text-white"> <strong>Tus Cafés Favoritos</strong></h1>
       <Form.Control className="form-control w-50" 
         value={search}
         onChange = {busqueda}
         type="text"
-        placeholder="find your favorite coffee"
+        placeholder="Busca tu café Favorito"
         />
         <Button
         className="btn btn-sm bg-secondary mt-3 w-25" 
-        onClick={()=>sorting("title")}>in alphabetical order: A-Z or Z-A
+        onClick={()=>sorting("title")}>Ordena Alfabéticamente: A-Z or Z-A
         </Button>
         </Form>
     
@@ -83,7 +84,7 @@ const MiApi = () => {
     </Card>
  ))}
 
-        <footer><strong>© Todos Los Derechos Reservados DMS - APIS utilizada de https://sampleapis.com/</strong></footer>
+        <footer><strong>© Todos Los Derechos Reservados DMS</strong></footer>
     </div>
         
     );
