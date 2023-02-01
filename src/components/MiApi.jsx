@@ -7,7 +7,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 
 const MiApi = () => {
     //La constante info guardará los valores que trae la API
-    const [info, setInfo] = useState ([]); 
+    const [infoList, setInfoList] = useState ([]); 
 
     //se llama la función que consume la Api
     useEffect (() => {
@@ -18,7 +18,7 @@ const MiApi = () => {
     const consultarInfo = async () => {
         const response = await fetch("/http_coffee.json");
         const cafeData = await response.json();
-        setInfo(cafeData);
+        setInfoList(cafeData);
     }
    
     //Función para realizar el filtrado
@@ -31,9 +31,9 @@ const MiApi = () => {
 
     let resultadoBusqueda = []
     if(!buscar) {
-        resultadoBusqueda = info
+        resultadoBusqueda = infoList
     } else{
-        resultadoBusqueda = info.filter((e) =>
+        resultadoBusqueda = infoList.filter((e) =>
         e.title.toLowerCase().includes(buscar.toLocaleLowerCase()) )
     }
 
@@ -41,26 +41,26 @@ const MiApi = () => {
     //Función para ordenar alfabéticamente
 
     const [ordenar, setOrdenar] = useState('A-Z');
-    const sorting = (e) => {
+    const OrdenarLista = (e) => {
         if(ordenar === 'A-Z') {
-            const sorted = [...info].sort((a, b) =>
+            const comparar= infoList.sort((a, b) =>
             a[e].toLowerCase() > b[e].toLowerCase() ? 1 : -1
             );
-            setInfo(sorted);
+            setInfoList(comparar);
             setOrdenar('Z-A');
         }
         if(ordenar === 'Z-A') {
-            const sorted = [...info].sort((a, b) =>
+            const comparar = infoList.sort((a, b) =>
             a[e].toLowerCase() < b[e].toLowerCase() ? 1 : -1
             );
-            setInfo(sorted);
+            setInfoList(comparar);
             setOrdenar('A-Z');
         }
     }
 
     return (
 
-    <div className="container">
+<>
       <Form>
        <h1 className="text-white"> <strong>Tu Café Favorito</strong></h1>
       <Form.Control className="form-control w-50" 
@@ -71,12 +71,12 @@ const MiApi = () => {
         />
         <Button
         className="btn btn-sm bg-secondary mt-3 w-25" 
-        onClick={()=>sorting("title")}>Ordena Alfabéticamente: A-Z o Z-A
+        onClick={()=>OrdenarLista("title")}>Ordena Alfabéticamente: A-Z o Z-A
         </Button>
         </Form>
     
     { resultadoBusqueda.map((elemento) => (
-    <Card className="shadow-lg p-3 border-primary" style={{width:'27rem', height: 400}} key={elemento.id}>
+    <Card className="p-3 border-primary" style={{width:'26rem', height: 400}} key={elemento.id}>
       <Card.Img src={elemento.image} />
       <Card.Body>
         <ListGroup variant="flush">
@@ -86,10 +86,7 @@ const MiApi = () => {
       </Card.Body>
     </Card>
  ))}
-
-        <footer><strong>© Todos Los Derechos Reservados DMS</strong></footer>
-    </div>
-        
+    </>
     );
 };
 

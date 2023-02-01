@@ -5,7 +5,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #C19A6B;
 }
 
 code {
@@ -28,6 +27,7 @@ code {
   grid-template-columns: 1fr 1fr 1fr; 
   grid-template-rows: 200px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 50px;
   grid-gap: 20px;
+  background: linear-gradient(#472B09, 40%, #F2AE5B );
 }
 
 img {
@@ -42,17 +42,33 @@ img {
 Form {
   display: flex;
   flex-direction: column;
-  background-image: url(/src/assets/img/Banner-Café.jpg);
+  align-items: flex-end;
   grid-area: header;
-  padding: 10px;
+  padding: 25px;
   margin-top: 10px;
 }
 
 footer {
-  background-color: #6F4E37;
+  background-image: url(/src/assets/img/footer-img.jpg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: #472B09;
   color: white;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
   grid-area: footer;
+}
+
+header {
+  grid-area: header;
+  background-image: url(/src/assets/img/Banner-Café.jpg);
+}
+
+#root {
+  background-image: url(/src/assets/img/FondoPantalla.jpg);
+}
+
+Card {
+  grid-area: main;
 }
