@@ -8,8 +8,12 @@ function App() {
   return (
     
     <div className="container">
-      <header></header>
+      <header>
+      <h1 className="text-white"> <strong>Tu Café Favorito</strong></h1>
+      </header>
+
       <MiApi />
+
       <footer><strong>© Todos Los Derechos Reservados DMS</strong></footer>
     </div>
     

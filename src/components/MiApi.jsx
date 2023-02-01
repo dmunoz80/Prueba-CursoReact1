@@ -62,7 +62,6 @@ const MiApi = () => {
 
 <>
       <Form>
-       <h1 className="text-white"> <strong>Tu Café Favorito</strong></h1>
       <Form.Control className="form-control w-50" 
         value={buscar}
         onChange = {busqueda}
@@ -70,7 +69,7 @@ const MiApi = () => {
         placeholder="Busca tu café favorito"
         />
         <Button
-        className="btn btn-sm bg-secondary mt-3 w-25" 
+        className="btn btn-sm bg-secondary mt-3 w-20" 
         onClick={()=>OrdenarLista("title")}>Ordena Alfabéticamente: A-Z o Z-A
         </Button>
         </Form>
