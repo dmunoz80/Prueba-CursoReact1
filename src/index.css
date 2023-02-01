@@ -31,16 +31,13 @@ code {
 }
 
 img {
-  max-width: 50%;
-  max-height: 50%;
+  max-width: 35%;
+  max-height: 45%;
   margin-left: auto;
   margin-right: auto;
   box-shadow: 10px 5px 5px #C19A6B;
 }
 
-.Card {
-  grid-area: main;
-}
 
 Form {
   display: flex;

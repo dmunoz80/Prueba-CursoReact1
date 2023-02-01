@@ -3,55 +3,58 @@ import { useState, useEffect } from "react";
 import Form from 'react-bootstrap/Form';
 import Button from "react-bootstrap/Button";
 import Card from 'react-bootstrap/Card';
+import ListGroup from "react-bootstrap/ListGroup";
 
 const MiApi = () => {
-    //Guardar info traída desde la Api
-    const [info, setInfo] = useState ([]);
-    //Llamar a la función que consume la Api
+    //La constante info guardará los valores que trae la API
+    const [info, setInfo] = useState ([]); 
+
+    //se llama la función que consume la Api
     useEffect (() => {
     consultarInfo();
-    }, [])
-    //Funcion que consulta la Api
+    }, []);
+
+    //Funcion que consulta la API
     const consultarInfo = async () => {
-        const response = await fetch("/coffee.json");
-        const data = await response.json();
-        setInfo(data);
+        const response = await fetch("/http_coffee.json");
+        const cafeData = await response.json();
+        setInfo(cafeData);
     }
    
-    //Función de Filtrado
-    const [search, setSearch] = useState ('')
+    //Función para realizar el filtrado
+    const [buscar, setBuscar] = useState ('')
 
     const busqueda = (e) => {
         e.preventDefault()
-        setSearch(e.target.value)
+        setBuscar(e.target.value)
     }
 
-    let results = []
-    if(!search) {
-        results = info
+    let resultadoBusqueda = []
+    if(!buscar) {
+        resultadoBusqueda = info
     } else{
-        results = info.filter((elemento) =>
-        elemento.title.toLowerCase().includes(search.toLocaleLowerCase()) )
+        resultadoBusqueda = info.filter((e) =>
+        e.title.toLowerCase().includes(buscar.toLocaleLowerCase()) )
     }
 
 
     //Función para ordenar alfabéticamente
 
-    const [ordenar, setOrdenar] = useState('AZ');
+    const [ordenar, setOrdenar] = useState('AaZ');
     const sorting = (e) => {
-        if(ordenar === 'AZ') {
+        if(ordenar === 'AaZ') {
             const sorted = [...info].sort((a, b) =>
             a[e].toLowerCase() > b[e].toLowerCase() ? 1 : -1
             );
             setInfo(sorted);
-            setOrdenar('ZA');
+            setOrdenar('ZaA');
         }
-        if(ordenar === 'ZA') {
+        if(ordenar === 'ZaA') {
             const sorted = [...info].sort((a, b) =>
             a[e].toLowerCase() < b[e].toLowerCase() ? 1 : -1
             );
             setInfo(sorted);
-            setOrdenar('AZ');
+            setOrdenar('AaZ');
         }
     }
 
@@ -61,7 +64,7 @@ const MiApi = () => {
       <Form>
        <h1 className="text-white"> <strong>Tus Cafés Favoritos</strong></h1>
       <Form.Control className="form-control w-50" 
-        value={search}
+        value={buscar}
         onChange = {busqueda}
         type="text"
         placeholder="Busca tu café Favorito"
@@ -72,14 +75,14 @@ const MiApi = () => {
         </Button>
         </Form>
     
-    { results.map((elemento) => (
-    <Card className="shadow-lg p-3 bg-body" key={elemento.id}>
-      <Card.Img src={elemento.image}  />
+    { resultadoBusqueda.map((elemento) => (
+    <Card className="shadow-lg p-3 bg-body border-primary" style={{width:'27rem',height: 400}} key={elemento.id}>
+      <Card.Img src={elemento.image} />
       <Card.Body>
-        <Card.Title className='bg-primary text-white text-center'>{elemento.title}</Card.Title>
-        <Card.Text className="pt-3">
-            <strong>Description:</strong> {elemento.description}
-        </Card.Text>
+        <ListGroup variant="flush">
+            <ListGroup.Item className="text-center"> <strong>{elemento.title}</strong></ListGroup.Item>
+            <ListGroup.Item><strong>Descripción: </strong>{elemento.description}</ListGroup.Item>
+        </ListGroup>
       </Card.Body>
     </Card>
  ))}

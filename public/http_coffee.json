@@ -2,205 +2,127 @@
     {
       "title": "Negro",
       "description": "El café negro es muy simple, se obtiene con granos de café molidos remojados en agua caliente, servidos tibios.",
-      "ingredients": [
-        "Coffee"
-      ],
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/640px-A_small_cup_of_coffee.JPG",
       "id": 1
     },
     {
       "title": "Latte",
-      "description": "Como la bebida de café más popular que existe, el café con leche se compone de un shot de espresso y leche al vapor con solo un toque de espuma. Se puede pedir solo o con un toque de sabor de cualquier cosa, desde vainilla hasta especias de calabaza.",
-      "ingredients": [
-        "Espresso",
-        "Steamed Milk"
-      ],
+      "description": "La bebida de café más popular que existe, el café con leche se compone de un shot de espresso y leche al vapor con solo un toque de espuma. Se puede pedir solo o con un toque de sabor vainilla",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Latte_at_Doppio_Ristretto_Chiang_Mai_01.jpg/509px-Latte_at_Doppio_Ristretto_Chiang_Mai_01.jpg",
       "id": 2
     },
     {
       "title": "Cappuccino",
       "description": "El capuchino es un café con leche hecho con más espuma que la leche al vapor, a menudo con una pizca de cacao en polvo o canela encima. A veces, puede encontrar variaciones que usan crema en lugar de leche o que también agregan un sabor.",
-      "ingredients": [
-        "Espresso",
-        "Steamed Milk",
-        "Foam"
-      ],
       "image": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Wet_Cappuccino_with_heart_latte_art.jpg",
       "id": 3
     },
     {
       "title": "Americano",
       "description": "Con un sabor similar al del café negro, el americano consiste en un shot de espresso diluido en agua caliente.",
-      "ingredients": [
-        "Espresso",
-        "Hot Water"
-      ],
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Hokitika_Cheese_and_Deli%2C_Hokitika_%283526706594%29.jpg/1280px-Hokitika_Cheese_and_Deli%2C_Hokitika_%283526706594%29.jpg",
       "id": 4
     },
     {
       "title": "Espresso",
       "description": "un shot de espresso se puede servir solo o como base de la mayoría de las bebidas de café, como lattes y macchiatos.",
-      "ingredients": [
-        "1oz Espresso"
-      ],
       "image": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Tazzina_di_caff%C3%A8_a_Ventimiglia.jpg",
       "id": 5
     },
     {
       "title": "Doppio",
       "description": "Un shot doble de espresso, el doppio es perfecto para darle un toque extra a tu paso.",
-      "ingredients": [
-        "2oz Espresso"
-      ],
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Doppio.jpg/2560px-Doppio.jpg",
       "id": 6
     },
     {
       "title": "Cortado",
       "description": "Como el yin y el yang, un cortado es el equilibrio perfecto entre espresso y leche caliente al vapor. La leche se usa para reducir la acidez del espresso.",
-      "ingredients": [
-        "1oz Espresso",
-        "1oz Steamed Milk"
-      ],
       "image": "https://upload.wikimedia.org/wikipedia/commons/1/16/Caf%C3%A9Cortado%28Tallat%29.jpg",
       "id": 7
     },
     {
       "title": "Red Eye",
       "description": "Llamado así por esos molestos vuelos de medianoche, un ojo rojo puede curar cualquier mañana aburrida. Una taza llena de café caliente con un espresso mezclado, esto definitivamente hará que tu corazón se acelere.",
-      "ingredients": [
-        "Coffee",
-        "Espresso"
-      ],
       "image": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Linea_doubleespresso.jpg",
       "id": 8
     },
     {
       "title": "Galão",
-      "description": "Originaria de Portugal, esta bebida de café caliente está estrechamente relacionada con el café con leche y el capuchino. La única diferencia es que contiene aproximadamente el doble de leche espumada, lo que la convierte en una bebida más liviana en comparación con las otras dos.",
-      "ingredients": [
-        "Espresso",
-        "Foamed milk"
-      ],
+      "description": "Originario de Portugal, está estrechamente relacionada con el café con leche y el capuccino. La diferencia es que contiene el doble de leche espumada, lo que la convierte en una bebida más liviana.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Gal%C3%A3o.jpg/1280px-Gal%C3%A3o.jpg",
       "id": 9
     },
     {
       "title": "Lungo",
       "description": "Un lungo es un espresso de larga duración. Cuanto más tiempo, más cafeína hay y más onzas puedes disfrutar.",
-      "ingredients": [
-        "Long pulled espresso"
-      ],
       "image": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Caff%C3%A8_lungo.JPG",
       "id": 10
     },
     {
       "title": "Macchiato",
       "description": "El macchiato es otra bebida a base de espresso que tiene una pequeña cantidad de espuma encima. Es el medio feliz entre un capuchino y un doppio.",
-      "ingredients": [
-        "Espresso",
-        "Foam"
-      ],
       "image": "https://upload.wikimedia.org/wikipedia/commons/0/07/Caff%C3%A8_Espresso_Macchiato_Schiumato.jpg",
       "id": 11
     },
     {
       "title": "Mocha",
       "description": "Para todos los amantes del chocolate, te enamorarás de un moka (o tal vez ya lo hayas hecho). El moka es una bebida espresso de chocolate con leche vaporizada y espuma.",
-      "ingredients": [
-        "Espresso",
-        "Steamed Milk",
-        "Chocolate"
-      ],
       "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Mocaccino-Coffee.jpg",
       "id": 12
     },
     {
       "title": "Ristretto",
       "description": "Ristretto es un shot de espresso. Utiliza menos agua caliente, lo que crea un sabor más dulce en comparación con el sabor amargo de un espresso tradicional o un doppio.",
-      "ingredients": [
-        "Short pulled espresso"
-      ],
       "image": "https://upload.wikimedia.org/wikipedia/commons/1/12/Doppio_ristretto_Chiang_Mai.jpg",
       "id": 13
     },
     {
       "title": "Flat White",
       "description": "Esta bebida nacida en Australia es básicamente un capuchino sin espuma ni chispas de chocolate. Es una bebida espresso con leche al vapor.",
-      "ingredients": [
-        "Espresso",
-        "Steamed Milk"
-      ],
       "image": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Flat_white_coffee_with_pretty_feather_pattern.jpg",
       "id": 14
     },
     {
       "title": "Affogato",
       "description": "El affogato es una excusa para disfrutar de una bola de helado a cualquier hora del día (y en cualquier época del año en mi opinión). Se sirve con una bola de helado y un trago de espresso, o dos.",
-      "ingredients": [
-        "Espresso",
-        "Ice cream"
-      ],
       "image": "https://upload.wikimedia.org/wikipedia/commons/1/17/Vinoteca%2C_Smithfield%2C_London_%284485849609%29.jpg",
       "id": 15
     },
     {
       "title": "Café au Lait",
       "description": "Café au lait es perfecto para el café minimalista que quiere un poco más de sabor. ¡Solo agrega un chorrito de leche tibia a tu café y listo!",
-      "ingredients": [
-        "Coffee",
-        "Steamed Milk"
-      ],
       "image": "https://upload.wikimedia.org/wikipedia/commons/0/06/Latte_art.jpg",
       "id": 16
     },
     {
       "title": "Irish",
       "description": "El café irlandés consiste en café negro, whisky y azúcar, cubierto con crema batida.",
-      "ingredients": [
-        "Coffee",
-        "Whiskey",
-        "Sugar",
-        "Cream"
-      ],
       "image": "https://upload.wikimedia.org/wikipedia/commons/6/61/Irish_coffee_glass.jpg",
       "id": 17
     },
     {
       "title": "Guayoyo",
       "description": "Café tradicional venezolano que se prepara filtrando el café molido en un cono de tela y vertiendo agua caliente encima. Se bebe preferentemente sin leche ni nata.",
-      "ingredients": [
-        "Coffee",
-        "Traditional",
-        "Hot Water"
-      ],
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/640px-A_small_cup_of_coffee.JPG",
       "id": 18
     },
     {
       "title": "Cortadito",
-      "description": "Método tradicional del café cubano en el que se mezcla un poco de café recién hecho con azúcar para crear una pasta muy azucarada. Luego agregue el resto del café y revuelva agregando leche hasta lograr una proporción de 50/50.",
-      "ingredients": [
-        "Coffee",
-        "Traditional",
-        "Sugar",
-        "Milk"
-      ],
+      "description": "Método tradicional cubano, se mezcla un poco de café recién hecho con azúcar para crear una pasta azucarada, se agrega el resto del café y se revuelve agregando leche hasta una proporción de 50/50.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Cuban_coffee-_2013-04-05_14-30.jpg",
       "id": 19
     },
     {
       "title": "Aguapanela Coffee",
       "description": "Llevar a ebullición la panela y el café en una cacerola pequeña durante 30 minutos hasta que la panela se derrita. Prepare su café usando su técnica de preparación favorita, pero agregue aguapanela caliente en lugar de agua caliente. El delicioso café endulzado está listo.",
-      "ingredients": [
-        "Coffee",
-        "Sweet",
-        "Panela",
-        "Traditional"
-      ],
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Agua_Panela_con_Queso_Fresco_at_La_Puerta_Falsa_%285617496209%29.jpg/640px-Agua_Panela_con_Queso_Fresco_at_La_Puerta_Falsa_%285617496209%29.jpg",
       "id": 20
+    },
+    {
+      "title": "Cold Brew",
+      "description": "Lo más moderno del grupo de café helado, los cafés fríos se hacen remojando los granos de café entre 6 y 36 horas, dependiendo de qué tan fuerte le gustaría su café frío. Una vez que los granos de café hayan terminado de remojarse, agregue leche fría o crema.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/ColdBrewCoffeein_Cans.png/640px-ColdBrewCoffeein_Cans.png",
+      "id": 21
     }
   ]
