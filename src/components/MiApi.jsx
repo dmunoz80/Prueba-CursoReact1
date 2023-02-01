@@ -44,14 +44,14 @@ const MiApi = () => {
     const OrdenarLista = (e) => {
         if(ordenar === 'A-Z') {
             const comparar= infoList.sort((a, b) =>
-            a[e].toLowerCase() > b[e].toLowerCase() ? 1 : -1
+            a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1
             );
             setInfoList(comparar);
             setOrdenar('Z-A');
         }
         if(ordenar === 'Z-A') {
             const comparar = infoList.sort((a, b) =>
-            a[e].toLowerCase() < b[e].toLowerCase() ? 1 : -1
+            a.title.toLowerCase() < b.title.toLowerCase() ? 1 : -1
             );
             setInfoList(comparar);
             setOrdenar('A-Z');
@@ -74,7 +74,7 @@ const MiApi = () => {
         </Button>
         </Form>
     
-    { resultadoBusqueda.map((elemento) => (
+    {resultadoBusqueda.map((elemento) => (
     <Card className="p-3 border-primary" style={{width:'26rem', height: 400}} key={elemento.id}>
       <Card.Img src={elemento.image} />
       <Card.Body>
