@@ -66,7 +66,7 @@
       "id": 11
     },
     {
-      "title": "Mocha",
+      "title": "Moka",
       "description": "Para todos los amantes del chocolate, te enamorarás de un moka (o tal vez ya lo hayas hecho). El moka es una bebida espresso de chocolate con leche vaporizada y espuma.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Mocaccino-Coffee.jpg",
       "id": 12
@@ -109,7 +109,7 @@
     },
     {
       "title": "Cortadito",
-      "description": "Método tradicional cubano, se mezcla un poco de café recién hecho con azúcar para crear una pasta azucarada, se agrega el resto del café y se revuelve agregando leche hasta una proporción de 50/50.",
+      "description": "Tradicional cubano, se mezcla un poco de café recién hecho con azúcar para crear una pasta azucarada, se agrega el resto del café y se revuelve agregando leche hasta una proporción de 50/50.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Cuban_coffee-_2013-04-05_14-30.jpg",
       "id": 19
     },

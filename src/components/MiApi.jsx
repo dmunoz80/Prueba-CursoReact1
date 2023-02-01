@@ -71,16 +71,16 @@ const MiApi = () => {
         />
         <Button
         className="btn btn-sm bg-secondary mt-3 w-25" 
-        onClick={()=>sorting("title")}>Ordena Alfabéticamente: A-Z or Z-A
+        onClick={()=>sorting("title")}>Ordena Alfabéticamente: de la A-Z o de la Z-A
         </Button>
         </Form>
     
     { resultadoBusqueda.map((elemento) => (
-    <Card className="shadow-lg p-3 bg-body border-primary" style={{width:'27rem',height: 400}} key={elemento.id}>
+    <Card className="shadow-lg p-3 bg-body border-primary" style={{width:'27rem', height: 400}} key={elemento.id}>
       <Card.Img src={elemento.image} />
       <Card.Body>
         <ListGroup variant="flush">
-            <ListGroup.Item className="text-center"> <strong>{elemento.title}</strong></ListGroup.Item>
+            <ListGroup.Item className="text-center"> <h4><strong>{elemento.title}</strong></h4></ListGroup.Item>
             <ListGroup.Item><strong>Descripción: </strong>{elemento.description}</ListGroup.Item>
         </ListGroup>
       </Card.Body>
