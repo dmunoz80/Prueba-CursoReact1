@@ -40,21 +40,21 @@ const MiApi = () => {
 
     //Función para ordenar alfabéticamente
 
-    const [ordenar, setOrdenar] = useState('AaZ');
+    const [ordenar, setOrdenar] = useState('A-Z');
     const sorting = (e) => {
-        if(ordenar === 'AaZ') {
+        if(ordenar === 'A-Z') {
             const sorted = [...info].sort((a, b) =>
             a[e].toLowerCase() > b[e].toLowerCase() ? 1 : -1
             );
             setInfo(sorted);
-            setOrdenar('ZaA');
+            setOrdenar('Z-A');
         }
-        if(ordenar === 'ZaA') {
+        if(ordenar === 'Z-A') {
             const sorted = [...info].sort((a, b) =>
             a[e].toLowerCase() < b[e].toLowerCase() ? 1 : -1
             );
             setInfo(sorted);
-            setOrdenar('AaZ');
+            setOrdenar('A-Z');
         }
     }
 
@@ -62,21 +62,21 @@ const MiApi = () => {
 
     <div className="container">
       <Form>
-       <h1 className="text-white"> <strong>Tus Cafés Favoritos</strong></h1>
+       <h1 className="text-white"> <strong>Tu Café Favorito</strong></h1>
       <Form.Control className="form-control w-50" 
         value={buscar}
         onChange = {busqueda}
         type="text"
-        placeholder="Busca tu café Favorito"
+        placeholder="Busca tu café favorito"
         />
         <Button
         className="btn btn-sm bg-secondary mt-3 w-25" 
-        onClick={()=>sorting("title")}>Ordena Alfabéticamente: de la A-Z o de la Z-A
+        onClick={()=>sorting("title")}>Ordena Alfabéticamente: A-Z o Z-A
         </Button>
         </Form>
     
     { resultadoBusqueda.map((elemento) => (
-    <Card className="shadow-lg p-3 bg-body border-primary" style={{width:'27rem', height: 400}} key={elemento.id}>
+    <Card className="shadow-lg p-3 border-primary" style={{width:'27rem', height: 400}} key={elemento.id}>
       <Card.Img src={elemento.image} />
       <Card.Body>
         <ListGroup variant="flush">
